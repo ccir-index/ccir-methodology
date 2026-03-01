@@ -2,7 +2,7 @@
 ## Compute Credit Index Research — CRI-H100 Governance and Legal Framework
 
 **Version:** 1.0  
-**Effective Date:** April 2026  
+**Effective Date:** March 2026  
 **Published by:** CCIR — Compute Credit Index Research  
 **Repository:** https://github.com/ccir-index/ccir-methodology  
 **Companion document:** CCIR Methodology v1.1.0  
@@ -15,7 +15,7 @@
 
 1. [Definitions](#1-definitions)
 2. [Administrator and Calculation Agent Framework](#2-administrator-and-calculation-agent-framework)
-3. [Conflict of Interest Policy](#3-conflict-of-interest-policy)
+3. [Conflict of Interest Policy](#3-conflict-of-interest-policy) — including §3.5 No Marketplace Interest
 4. [Governance Structure](#4-governance-structure)
 5. [Change Control](#5-change-control)
 6. [Restatements](#6-restatements)
@@ -94,25 +94,37 @@ If the Calculation Agent function is delegated to a third party, the delegation 
 
 The Administrator and Calculation Agent functions shall be operationally separated to the extent practicable. Routine calculation shall not be subject to discretionary override by any person with a financial interest in the Index value.
 
-### 2.4 Data Input Design
+### 2.4 Data Source Independence
 
-CRI-H100 is calculated exclusively from publicly available data obtained through automated collection from the Primary Data Source. No submissions from market participants are solicited or accepted. This design eliminates the category of conflicts of interest inherent in submission-based benchmarks — the governance challenge that prompted the IOSCO Principles for Financial Benchmarks following the LIBOR manipulation scandal.
+CRI-H100 is calculated from publicly available data obtained through automated collection from the Primary Data Source. No submissions from market participants are solicited or accepted.
+
+**CCIR does not operate a GPU rental marketplace.** CCIR has no commercial interest in GPU rental prices, rental transaction volume, or the financial performance of any GPU marketplace operator. This structural independence means that CCIR has no financial incentive to influence the index in any direction — a property that cannot be achieved through policy alone when the benchmark administrator has marketplace interests. See Governance Framework §3.5 for an elaborated discussion.
 
 The data input hierarchy for routine Index determination is:
 
 1. **Automated API collection** per the published Methodology (no discretion exercised)
-2. **Manifest Error Override** by the Administrator under Section 8.2 (discretion exercised, documented, and disclosed)
-3. **Fallback provisions** per Section 7 (triggered by data unavailability, not discretion)
+2. **Manifest Error Override** by the Administrator under Governance Framework §8.2 (discretion exercised, documented, and disclosed)
+3. **Fallback provisions** per Governance Framework §7 (triggered by data unavailability, not discretion)
 
-Expert judgement is not applied in routine Index determination. The only circumstance in which the Administrator exercises discretion over data inputs is the Manifest Error Override, which is subject to the documentation and disclosure requirements of Section 8.3.
+Expert judgement is not applied in routine Index determination.
 
 ---
 
 ## 3. Conflict of Interest Policy
 
-### 3.1 Independence Commitment
+### 3.1 Structural Independence Statement
 
-The Administrator maintains policies designed to preserve the independence and integrity of the Index, including:
+The integrity of any financial benchmark depends on the structural independence of its administrator from the market the benchmark measures. CCIR's independence is structural, not merely policy-based.
+
+**CCIR does not operate a GPU rental marketplace.** CCIR has no commercial interest in GPU rental transaction volume, GPU rental prices, or the financial performance of GPU marketplace operators. CCIR derives no revenue from GPU rentals being priced higher or lower, and has no business relationship with Vast.ai or any other GPU rental marketplace beyond accessing their publicly available API. CCIR cannot benefit commercially from any particular CRI-H100 index level.
+
+**CCIR does not own GPU hardware.** CCIR has no inventory exposure to GPU collateral value. CCIR is not a GPU lender, GPU lessor, or GPU hardware broker.
+
+**CCIR does not trade GPU-backed financial instruments.** CCIR does not hold positions in GPU compute derivatives, GPU-backed loans, or any instrument whose value is influenced by CRI-H100.
+
+This structural independence is the foundation of CCIR's governance model. It means that the category of conflict most relevant to GPU rental benchmarks — an administrator with financial exposure to the underlying asset they measure — does not apply to CCIR. No policy, recusal procedure, or disclosure regime can substitute for this structural fact.
+
+The Administrator additionally maintains the following policies to preserve Index integrity:
 
 - Separation between governance and any commercial activities that could benefit from a particular Index value
 - Disclosure of material economic interests in GPU rental markets, GPU hardware markets, or GPU-backed financial instruments
@@ -134,6 +146,16 @@ CCIR derives commercial benefit from Index adoption through advisory services, a
 ### 3.4 Disclosure
 
 All Material Methodology Changes shall be publicly disclosed with effective date, rationale, and a description of expected impact on Index values before taking effect. Conflict of interest disclosures shall be maintained and made available upon request.
+
+### 3.5 No Marketplace Interest — Elaborated
+
+Because the GPU rental benchmark market is nascent, and because at least one competing index is operated by an entity with direct commercial interests in GPU rental marketplace activity, CCIR provides this elaborated disclosure for the avoidance of doubt.
+
+**The conflict that CCIR structurally avoids.** A GPU rental rate index administrator that also operates a GPU rental marketplace, owns GPU hardware, or provides GPU-backed loans has a direct financial interest in the market the index measures. Higher transaction volume and higher prices benefit a marketplace operator's revenue. A marketplace operator that also administers a rental rate benchmark has structural incentive to design, calibrate, or exercise discretion over the index in ways that support favorable market conditions for their commercial operations. This is the GPU-sector analogue to the submitter conflicts that produced LIBOR manipulation — where panel banks influenced benchmark submissions to benefit their trading positions.
+
+**What this means for index design.** CRI-H100 was designed from inception to eliminate this conflict structurally rather than manage it through policy. The index is calculated from publicly available API data with no submissions, no discretion in routine calculation, and no dependency on any marketplace operator's cooperation or goodwill. The methodology is open and independently reproducible precisely so that no party — including CCIR — can influence the index without detection.
+
+**Lender and structurer due diligence.** When evaluating any GPU rental rate benchmark for credit document citation, lenders and structurers should independently verify: (a) whether the benchmark administrator operates a GPU rental marketplace; (b) whether the administrator holds GPU hardware inventory; (c) whether the administrator provides GPU-backed loans or lending services; and (d) whether the benchmark methodology is independently reproducible without the administrator's cooperation. These inquiries are analogous to the submitter conflict disclosures that became standard practice in financial benchmark governance following the LIBOR reform process.
 
 ---
 
@@ -597,7 +619,7 @@ For use in credit agreements, indentures, and loan documents:
 
 | Version | Effective Date | Change Type | Summary |
 |---------|---------------|-------------|---------|
-| 1.0 | April 2026 | Initial | First publication; establishes Administrator/Calculation Agent framework, governance structure, change control, fallback waterfall, data collection and third party oversight, complaints procedure, regulatory cooperation, IP and licensing, rating agency disclosure. Designed with reference to IOSCO Principles for Financial Benchmarks (2013). |
+| 1.0 | March 2026 | Initial | First publication; establishes Administrator/Calculation Agent framework, governance structure, change control, fallback waterfall, data collection and third party oversight, complaints procedure, regulatory cooperation, IP and licensing, rating agency disclosure. §3.1 Structural Independence Statement and §3.5 No Marketplace Interest explicitly address the structural independence of the Administrator from GPU marketplace operations. Designed with reference to IOSCO Principles for Financial Benchmarks (2013). |
 
 ---
 
@@ -609,7 +631,7 @@ This Governance Framework is designed with reference to the IOSCO Principles for
 |-----------|-------------|-------------------|
 | 1. Overall Responsibility | Administrator responsibility | §§1–2 |
 | 2. Third Party Oversight | Oversight of data sources | §9.3 |
-| 3. Conflicts of Interest | COI policies and disclosure | §3 |
+| 3. Conflicts of Interest | COI policies, structural independence, no marketplace interest | §§3.1–3.5 |
 | 4. Control Framework | Controls over determination process | §§2, 8, 9.2 |
 | 5. Internal Oversight | Oversight function | §§4.2, 4.3, 11.3 |
 | 6. Benchmark Design | Accurate representation of measured interest | CCIR Methodology §§5–6 |
