@@ -569,7 +569,7 @@ This section is provided to assist rating agencies in evaluating CRI-H100 for us
 
 **Thin market.** Current Observation counts are low. CCIR applies and discloses the Low Confidence flag when counts fall below minimum thresholds. Rating agencies should monitor Observation counts as a measure of Index reliability over time. The Annual Benchmark Review (Section 4.3) includes a formal data sufficiency assessment.
 
-**Performance variance.** The Index does not adjust for intra-model GPU performance variance. See CCIR Methodology v1.1.0, Section 11.3.
+**Performance variance.** The Index does not adjust for intra-model GPU performance variance. See CCIR Methodology v1.1.0, Section 10.4.
 
 **Market immaturity.** The GPU rental market is evolving rapidly. The historical CRI-H100 price series is short. Rating agencies should apply conservative assumptions regarding rate stability and consider stress scenarios reflecting rapid market price movement.
 
@@ -619,7 +619,7 @@ For use in credit agreements, indentures, and loan documents:
 
 | Version | Effective Date | Change Type | Summary |
 |---------|---------------|-------------|---------|
-| 1.0 | March 2026 | Initial | First publication; establishes Administrator/Calculation Agent framework, governance structure, change control, fallback waterfall, data collection and third party oversight, complaints procedure, regulatory cooperation, IP and licensing, rating agency disclosure. §3.1 Structural Independence Statement and §3.5 No Marketplace Interest explicitly address the structural independence of the Administrator from GPU marketplace operations. Designed with reference to IOSCO Principles for Financial Benchmarks (2013). |
+| 1.0 | April 2026 | Initial | First publication; establishes Administrator/Calculation Agent framework, governance structure, change control, fallback waterfall, data collection and third party oversight, complaints procedure, regulatory cooperation, IP and licensing, rating agency disclosure. §3.1 Structural Independence Statement and §3.5 No Marketplace Interest explicitly address the structural independence of the Administrator from GPU marketplace operations. Designed with reference to IOSCO Principles for Financial Benchmarks (2013). |
 
 ---
 

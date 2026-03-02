@@ -9,7 +9,7 @@ All changes to CCIR methodology and governance documents are recorded here. This
 ### v1.1.0 — February 2026
 **Type:** Initial publication (no prior version)
 **Material change:** No (initial release)
-**Effective date:** February 2026
+**Effective date:** April 2026
 **Approved by:** CCIR Administrator
 
 **Changes:**
@@ -52,7 +52,7 @@ All changes to CCIR methodology and governance documents are recorded here. This
 ### v1.0 — February 2026
 **Type:** Initial publication
 **Material change:** No (initial release)
-**Effective date:** February 2026
+**Effective date:** April 2026
 
 **Highlights:**
 - IOSCO Principles for Financial Benchmarks alignment (all 19 principles mapped, Appendix C)
