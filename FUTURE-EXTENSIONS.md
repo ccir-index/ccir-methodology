@@ -68,20 +68,65 @@ CRI-D replaces management-estimate depreciation assumptions with market-observed
 ### What It Measures
 CRI-H100 measures listed rental rates without adjusting for intra-model performance variance. Research published at GPGPU '26 (Silicon Data, March 2026) documents up to 38% performance variation within the H100 SXM model.
 
-CRI-H100-PA will adjust the raw price signal for measured performance differences, producing a compute-per-dollar index rather than a price-per-GPU-hour index.
+CRI-H100-PA will normalize the raw $/GPU-hour price by a standardized measure of delivered compute, enabling cross-hardware comparison while preserving the transparency and reproducibility of rental-rate data. In formal terms:
+
+```
+PA-Rate = Rental Rate / Performance Index
+```
+
+where the Performance Index is a dimensionless composite score representing the GPU's effective compute capacity — not its theoretical FLOP ceiling, but its observed, reproducible throughput under standard workloads.
+
+### Role in the Index Family
+CRI-H100-PA occupies a specific and distinct position in the CRI index family:
+
+| Index | Answers | Primary Use |
+|-------|---------|-------------|
+| CRI-H100 | What does the market charge per GPU-hour? | Credit agreements, covenant triggers, collateral valuation |
+| CRI-H100-PA | What does the market charge per unit of delivered compute? | Cross-hardware comparison, procurement, depreciation modeling |
+| CRI-D | How fast are rental rates declining across generations? | LGD modeling, ABS stress testing |
+| CRI-S | Is the liquidation floor holding relative to rental rates? | Collateral coverage monitoring |
+
+CRI-H100 is the cash-flow benchmark. CRI-H100-PA is the compute-normalized benchmark. They are complements, not substitutes.
+
+### The Bridge to a Compute Standard
+
+CRI-H100-PA is designed as the methodological bridge between hardware-specific rental rates and a future cross-hardware compute standard of the kind described in the Trump Administration's AI Action Plan (July 2025) and the academic literature on compute market infrastructure.
+
+The central challenge in building compute derivatives — raised by analysts including Dave Friedman in "The Compute Market Is Building in the Wrong Order" (March 2026) — is the absence of a dimensionless compute unit that survives GPU generation transitions. Without such a unit, forward contracts on H100 GPU-hours face embedded obsolescence risk every 18–24 months, because there is no agreed conversion ratio between an H100-hour and a B200-hour.
+
+A performance-adjusted rental rate addresses exactly this gap. By expressing rental cost in terms of a standardized compute unit rather than a specific GPU model, CRI-H100-PA produces a price series that can, in principle, be extended across hardware generations as the Performance Index is recalibrated for each new architecture. This is not yet a full cross-hardware standard — but it is the empirical foundation one would require.
+
+CCIR's position is that this sequencing matters: hardware-specific rental rates first (CRI-H100), performance-adjusted rates second (CRI-H100-PA), and cross-hardware standardization third — when the institutional infrastructure exists to support it. The historical rental rate time series CRI-H100 is accumulating is itself a prerequisite for any future standardization process: it provides the empirical price record against which a compute unit would need to be anchored to real market values. SOFR was not built from scratch; it was built on top of existing repo transaction data. A compute standard will similarly require a credible historical price series.
+
+CCIR will design CRI-H100-PA to be compatible with a future NIST or equivalent compute standard if and when one emerges, without committing to any specific institutional timeline.
+
+### Performance Index Design
+
+A credible Performance Index must reflect delivered compute, not theoretical FLOP ceilings. For modern accelerators, this means a weighted composite of:
+
+- **Tensor throughput** (FP8/FP16/BF16) — primary signal for training workloads
+- **Memory bandwidth** — critical for inference and large-model serving
+- **Interconnect bandwidth** (NVLink, PCIe, NVSwitch) — relevant for multi-GPU configurations
+- **Model-level performance** — LLM tokens/sec or training throughput under standard benchmark conditions
+
+Weights may be equal (maximally transparent), workload-specific (LLM-optimized, training-optimized), or empirically derived (regression against observed rental prices).
+
+### Normalization Options Under Evaluation
+
+Three approaches are under evaluation, in increasing order of ambition:
+
+**Option 1 — CCIR-defined Performance Index.** CCIR publishes a composite score under the same open-methodology governance as CRI-H100. Most transparent and governable; best aligned with IOSCO principles. Requires CCIR to run or commission a reproducible benchmark suite on sampled providers.
+
+**Option 2 — Industry benchmark normalization.** Normalize against an established benchmark suite (MLPerf, HuggingFace Open LLM Leaderboard, or equivalent). More workload-realistic, but benchmarks evolve and may be harder to govern over multi-year periods. Introduces a dependency on a third-party benchmark standard.
+
+**Option 3 — Future NIST compute unit.** If NIST or an equivalent body produces a standardized compute unit as envisioned in the AI Action Plan, CRI-H100-PA would adopt it as the denominator. This is the ideal long-term outcome but cannot be committed to on any specific timeline.
+
+CCIR's current preference is Option 1 as the launch methodology, with explicit compatibility design for Option 3.
 
 ### Data Requirements
-A standardized, reproducible performance grading methodology. Options under evaluation:
-- Independent benchmark suite run by CCIR on sampled providers
-- Licensed performance data from a third party (subject to open-methodology compatibility)
-- Community benchmark dataset with sufficient coverage and reproducibility
-
-### Relationship to CRI-H100
-CRI-H100-PA complements rather than replaces CRI-H100. The two indices answer different questions:
-- CRI-H100: What does the market charge per GPU-hour?
-- CRI-H100-PA: What does the market charge per unit of standardized compute?
-
-Both are useful for credit analysis. CRI-H100 is appropriate for price-based covenant triggers. CRI-H100-PA is appropriate for collateral valuation adjusted for actual compute capacity.
+- Minimum 26 weekly CRI-H100 observations (six months) to establish a meaningful PA baseline
+- Reproducible benchmark scores for a representative sample of Vast.ai H100 SXM providers
+- Governance framework for Performance Index updates as hardware configurations evolve
 
 ---
 
