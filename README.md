@@ -190,6 +190,7 @@ Complaints regarding index calculation, methodology interpretation, or governanc
 | Index | Status | Description |
 |-------|--------|-------------|
 | CRI-H100 | **Live** — first publication March 2026 | Weekly median H100 SXM rental rate, US marketplace |
+| CRI-R | **Live** — companion series, not a benchmark | Weekly posted rate cards from Azure, AWS, GCP, RunPod — H100, A100, H200, V100. Published at `data/reference-rates/`. Not an IOSCO-compliant benchmark; contextual reference data only. |
 | CRI-S | Planned — Q3-Q4 2026 | Rental-resale spread index (requires broker data partnership) |
 | CRI-D | Planned — Q1-Q2 2027 | Cross-generational depreciation curves (requires 12-18 months CRI-H100 data) |
 | CRI-H100-PA | Roadmap | Performance-adjusted variant (requires reproducible benchmark methodology) |

@@ -146,19 +146,45 @@ Publication of regional variants enables formal analysis of geographic price str
 
 ---
 
-## Tier 2 Reserved-Capacity Index (CRI-R2)
+## CRI-R: Reference Rate Companion Series — Live
+
+**Status:** Live as of March 2026
+**Data repository:** `data/reference-rates/` in the cri-h100 repository
+**Governance note:** CRI-R is contextual reference data, not an IOSCO-compliant benchmark
+
+### What It Measures
+CRI-R collects and publishes posted rate cards from hyperscalers and mid-market platforms weekly. It is not a market-clearing price and is not an input to CRI-H100. It exists to quantify the **reliability premium** — the spread between CRI-H100 (Tier 3 marginal spot) and what the market charges for managed infrastructure, guaranteed capacity, and enterprise SLAs.
+
+### Sources
+| Source | Auth Required | Tier | Notes |
+|--------|--------------|------|-------|
+| Azure (prices.azure.com) | None | Tier 1 | Fully reproducible |
+| AWS (pricing.us-east-1.amazonaws.com) | None | Tier 1 | Fully reproducible |
+| GCP (cloudbilling.googleapis.com) | Free API key | Tier 1 | Substantially reproducible |
+| RunPod (api.runpod.io/graphql) | Free API key | Tier 2 | Aggregate posted rates, not listings |
+
+### Coverage
+4 platforms · 18 rate points per collection — H100, A100, H200, V100 across on-demand, spot, and reserved tiers.
+
+### Governance Boundary
+CRI-R is explicitly excluded from the CRI-H100 calculation. Adding any CRI-R source as a CRI-H100 benchmark input requires a Material Methodology Change under Governance Framework §5.2 (60-day advance notice, 30-day stakeholder consultation).
+
+---
+
+## CRI-R2: Tier 2 Reserved-Capacity Benchmark — Planned
 
 **Target:** TBD (contingent on API access or data-sharing agreements)
 **Methodology version:** Separate document — METHODOLOGY-CRI-R2-v1.0.md
+**Distinction from CRI-R:** CRI-R publishes posted rate cards (what providers advertise). CRI-R2 would publish a governed benchmark of executed or committed reserved-capacity pricing — a materially different data type requiring data-sharing agreements and formal IOSCO governance.
 
 ### What It Measures
-CRI-H100 measures Tier 3 (on-demand secondary marketplace) pricing. CRI-R2 would measure Tier 2 (reserved and committed capacity from mid-market providers) — closer to the pricing environment of mid-market GPU-backed borrowers.
+CRI-H100 measures Tier 3 (on-demand secondary marketplace) pricing. CRI-R2 would measure Tier 2 (reserved and committed capacity from mid-market providers) as a governed benchmark suitable for credit document citation — closer to the pricing environment of mid-market GPU-backed borrowers.
 
 ### Data Requirements
-API access to published reserved-instance rate cards from multiple providers, or data-sharing agreements with mid-market platforms (Lambda, CoreWeave spot, RunPod reserved).
+API access to executed or committed reserved-instance pricing from multiple providers, or formal data-sharing agreements with mid-market platforms (Lambda, CoreWeave, RunPod reserved). Posted rate cards (already collected in CRI-R) are insufficient — CRI-R2 requires pricing that reflects actual market-clearing dynamics in the reserved-capacity tier.
 
 ### Credit Application
-Most GPU-backed credit agreements involve borrowers whose revenue comes from Tier 2 reserved capacity, not Tier 3 spot. CRI-R2 would provide a more directly applicable reference rate for this borrower profile. CRI-H100 would remain useful as a stress-case floor.
+Most GPU-backed credit agreements involve borrowers whose revenue comes from Tier 2 reserved capacity, not Tier 3 spot. CRI-R2 would provide a more directly applicable primary reference rate for this borrower profile. CRI-H100 would remain the stress-case floor reference for Tier 1 borrowers and a secondary check for Tier 2 facilities.
 
 ---
 

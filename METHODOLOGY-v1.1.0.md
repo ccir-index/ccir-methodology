@@ -93,7 +93,7 @@ CRI-H100 does **not** measure:
 - Non-US rental rates
 - H100 PCIe, H200, A100, or other GPU models (separate indices)
 - Performance-adjusted compute value (see CRI-H100-PA roadmap)
-- Reserved-capacity or committed-instance pricing (see CRI-R2 roadmap)
+- Reserved-capacity or committed-instance pricing (see CRI-R2 roadmap). Note: CRI-R, a companion series of posted rate cards from Azure, AWS, GCP, and RunPod, is published weekly alongside CRI-H100 as contextual reference data. CRI-R is not an input to CRI-H100 and is not an IOSCO-compliant benchmark.
 
 ### 3.3 Appropriate Use in Credit Agreements
 
