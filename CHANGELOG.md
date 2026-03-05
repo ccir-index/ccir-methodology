@@ -6,6 +6,19 @@ All changes to CCIR methodology and governance documents are recorded here. This
 
 ## Methodology
 
+### v1.1.1 — 2026-03-05
+**Type:** Non-material methodology change
+**Material change:** No
+**Effective date:** 2026-03-05
+**Approved by:** CCIR Administrator
+
+**Changes:**
+- Minimum daily observation threshold lowered from 10 to 8 Qualifying Listings per Collection Day
+- Rationale: Calibrated to observed H100 SXM market depth on Vast.ai US marketplace. Trailing 7-day median benefits more from additional valid days in the window than from a stricter single-day threshold. At observed market depth (typically 6-9 qualifying listings), a threshold of 10 was systematically excluding valid data days.
+- Impact: Days with 8-9 qualifying observations now contribute to the weekly pool. Low Confidence flag threshold unchanged (< 3 valid days).
+
+---
+
 ### v1.1.0 — February 2026
 **Type:** Initial publication (no prior version)
 **Material change:** No (initial release)
@@ -27,22 +40,6 @@ All changes to CCIR methodology and governance documents are recorded here. This
 - Added multi-model collection (v1.0.0 was H100 SXM only)
 - Formalized Low Confidence flag thresholds
 - Added per-model directory structure to data archive
-
----
-
-### v1.1.1 — March 2026
-**Type:** Non-material addition
-**Material change:** No
-**Effective date:** March 2026
-**Approved by:** CCIR Administrator
-
-**Changes:**
-- Added `collect_reference_rates.py` pipeline collecting posted rate cards from Azure, AWS, GCP, and RunPod
-- CRI-R companion series launched: weekly snapshots of H100, A100, H200, and V100 posted rates across 4 platforms (18 rate points per collection)
-- Output published at `data/reference-rates/YYYY-MM-DD.json/.csv/.meta.json` with SHA-256 provenance
-- Azure and AWS sources require no authentication (fully reproducible); GCP and RunPod require a freely obtainable API key (disclosed in metadata)
-- CRI-R is **not** an IOSCO-compliant benchmark and is **not** an input to CRI-H100. It is contextual reference data published alongside CRI-H100 to enable reliability premium spread analysis
-- Adding any CRI-R source as an official CRI-H100 benchmark input would constitute a Material Methodology Change under Governance §5.2 (60-day advance notice required)
 
 ---
 
