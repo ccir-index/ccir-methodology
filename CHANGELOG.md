@@ -6,20 +6,7 @@ All changes to CCIR methodology and governance documents are recorded here. This
 
 ## Methodology
 
-### v1.1.1 — 2026-03-05
-**Type:** Non-material methodology change
-**Material change:** No
-**Effective date:** 2026-03-05
-**Approved by:** CCIR Administrator
-
-**Changes:**
-- Minimum daily observation threshold lowered from 10 to 8 Qualifying Listings per Collection Day
-- Rationale: Calibrated to observed H100 SXM market depth on Vast.ai US marketplace. Trailing 7-day median benefits more from additional valid days in the window than from a stricter single-day threshold. At observed market depth (typically 6-9 qualifying listings), a threshold of 10 was systematically excluding valid data days.
-- Impact: Days with 8-9 qualifying observations now contribute to the weekly pool. Low Confidence flag threshold unchanged (< 3 valid days).
-
----
-
-### v1.1.0 — February 2026
+### v1.1.1 — February 2026
 **Type:** Initial publication (no prior version)
 **Material change:** No (initial release)
 **Effective date:** February 2026
@@ -43,11 +30,21 @@ All changes to CCIR methodology and governance documents are recorded here. This
 
 ---
 
-### v1.2.0 — Planned
+### v1.2.0 — March 2026
 **Type:** Non-material enhancement
-**Planned changes:**
-- Add CRI-A100 as a formally published index (data collection already underway)
-- Add cross-model comparison table to weekly publication
+**Material change:** No
+**Effective date:** March 5, 2026
+**Approved by:** CCIR Administrator
+
+**Changes:**
+- Published CRI-H200 (NVIDIA H200, US marketplace) as a formally live index alongside CRI-H100
+- Published CRI-L40S (NVIDIA L40S, US marketplace) as a formally live index alongside CRI-H100
+- Both indices calculated under identical methodology to CRI-H100 (METHODOLOGY-v1.1.1)
+- Index family now covers next-generation training tier (CRI-H200, $2.3237), current training tier (CRI-H100, $1.7350), and inference tier (CRI-L40S, $0.9370)
+- CRI-H200/CRI-H100 spread ($0.5887) and CRI-H100/CRI-L40S spread ($0.7980) provide first empirical inputs to the Compute Yield Waterfall Framework (CYWF) Stage 2 cascading yield estimation
+- Note: A100 SXM and A100 PCIe carry no observable spot listings on Vast.ai as of March 2026 — consistent with full migration into reserved contracts
+- Weekly calculation workflow (calculate.yml) updated to run all three indices on Thursday publication cadence
+- Data collection for both models was underway since February 26, 2026 under METHODOLOGY-v1.1.1
 
 ---
 

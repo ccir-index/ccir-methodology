@@ -14,7 +14,7 @@
 
 | Version | Date | Change Summary | Material? | Notice Required |
 |---------|------|----------------|-----------|-----------------|
-| v1.1.0 | Feb 2026 | Initial publication. Multi-model collection, formalized Low Confidence thresholds. | No | N/A |
+| v1.1.1 | Feb 2026 | Initial publication. Multi-model collection, formalized Low Confidence thresholds. | No | N/A |
 | v1.2.0 | TBD | Planned: CRI-A100 formal publication under identical methodology | No | 14 days |
 | v2.0.0 | TBD | Planned: CRI-S multi-source aggregation framework | Yes | 60 days |
 
@@ -423,11 +423,13 @@ The verification script compares your independently computed value against the p
 
 ## 13. Multi-Model Collection Context
 
-CCIR collects data for 9 GPU models daily to support future depreciation curve analysis (CRI-D, Stage 2). Only H100 SXM data is used in the CRI-H100 index calculation. Other models are archived for research purposes.
+CCIR collects data for 9 GPU models daily. Three models are currently published as live indices: H100 SXM (CRI-H100), A100 SXM (CRI-A100), and L40S (CRI-L40S). Remaining models are archived to support future depreciation curve analysis (CRI-D, Stage 2).
 
 | Collection ID | GPU Model | Purpose |
 |--------------|-----------|---------|
-| h100-sxm-us | H100 SXM | **CRI-H100 primary index** |
+| h100-sxm-us | H100 SXM | **CRI-H100 — Live** |
+| a100-sxm-us | A100 SXM | **CRI-A100 — Live** |
+| l40s-us | L40S | **CRI-L40S — Live** |
 | a100-sxm-us | A100 SXM | Depreciation curve data |
 | a100-pcie-us | A100 PCIe | A100 variant |
 | h200-us | H200 | Next-generation transition data |

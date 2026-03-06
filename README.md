@@ -15,7 +15,7 @@ All documents in this repository are versioned, change-controlled, and subject t
 
 ## Scope and Definitions
 
-**What this repository covers.** This repository governs the CRI family of GPU rental rate indices — open-methodology benchmarks designed for credit document citation. The primary index is CRI-H100: a weekly median $/GPU-hour for NVIDIA H100 SXM on-demand listings on the US Vast.ai marketplace.
+**What this repository covers.** This repository governs the CRI family of GPU rental rate indices — open-methodology benchmarks designed for credit document citation. The live indices are CRI-H200 (NVIDIA H200, next-generation training tier), CRI-H100 (NVIDIA H100 SXM, training tier), and CRI-L40S (NVIDIA L40S, inference tier): each a weekly median $/GPU-hour for on-demand listings on the US Vast.ai marketplace.
 
 **What this repository does not cover.** This repository does not contain the underlying daily data (archived at [github.com/ccir-index/cri-h100](https://github.com/ccir-index/cri-h100)), the verification pipeline code (also in cri-h100), or CCIR's advisory and administrator service agreements.
 
@@ -28,7 +28,7 @@ All documents in this repository are versioned, change-controlled, and subject t
 ```
 ccir-methodology/
 ├── README.md                  ← This file — start here
-├── METHODOLOGY-v1.1.0.md      ← Full technical specification for CRI-H100
+├── METHODOLOGY-v1.1.1.md      ← Full technical specification for CRI-H100
 ├── GOVERNANCE-v1_0.md         ← Administrator framework, IOSCO alignment, change control
 ├── CHANGELOG.md               ← Version history and change log
 ├── VERSIONING.md              ← Semantic versioning policy
@@ -42,7 +42,7 @@ ccir-methodology/
 
 | Document | Purpose | Audience |
 |----------|---------|----------|
-| `METHODOLOGY-v1.1.0.md` | Defines exactly how CRI-H100 is calculated | Analysts, attorneys, rating agencies, third-party verifiers |
+| `METHODOLOGY-v1.1.1.md` | Defines exactly how CRI-H100 is calculated | Analysts, attorneys, rating agencies, third-party verifiers |
 | `GOVERNANCE-v1_0.md` | Defines how CCIR is administered, change-controlled, and audited | Lenders, structurers, rating agencies, regulators |
 | `REPRODUCIBILITY.md` | Step-by-step guide to independently verifying any published value | Any third party seeking to audit a specific index value |
 | `CHANGELOG.md` | Complete version history with change descriptions | Anyone tracking methodology evolution |
@@ -70,7 +70,7 @@ These are structural facts, not policy commitments. See `GOVERNANCE-v1_0.md` §�
 ## How to Use This Repository
 
 **If you are a lender or structurer** evaluating CRI-H100 for a credit agreement:
-1. Read `METHODOLOGY-v1.1.0.md` §3 ("What CRI-H100 Measures — and Does Not Measure") to confirm the index is appropriate for your use case
+1. Read `METHODOLOGY-v1.1.1.md` §3 ("What CRI-H100 Measures — and Does Not Measure") to confirm the index is appropriate for your use case
 2. Review the covenant templates in the CCIR white paper (linked at ccir.io)
 3. Use the citation language in `GOVERNANCE-v1_0.md` Appendix A for your legal documents
 4. Note the commit hash pinning guidance below if your transaction requires a fixed methodology version
@@ -78,7 +78,7 @@ These are structural facts, not policy commitments. See `GOVERNANCE-v1_0.md` §�
 **If you are a rating agency analyst** evaluating CRI-H100 for a structured product:
 1. Start with `GOVERNANCE-v1_0.md` §15 (Rating Agency Disclosure Statement)
 2. Review the IOSCO alignment summary in Governance Appendix C
-3. Review `METHODOLOGY-v1.1.0.md` §10 (Known Limitations) for the material risk disclosures
+3. Review `METHODOLOGY-v1.1.1.md` §10 (Known Limitations) for the material risk disclosures
 4. Use `REPRODUCIBILITY.md` to independently verify the calculation against raw data
 
 **If you are an attorney** drafting CRI-H100 into a credit document:
@@ -113,7 +113,7 @@ The verification script compares your independently computed value against the p
 
 When referencing CRI-H100 in a credit agreement or legal document, cite the methodology version in effect at the time of the agreement:
 
-> *"The Rental Rate Reference shall be the CRI-H100 index published by Compute Credit Index Research LLC, calculated in accordance with CCIR Methodology v1.1.0 (https://github.com/ccir-index/ccir-methodology/blob/main/METHODOLOGY-v1.1.0.md), as may be amended pursuant to the Change Control provisions of CCIR Governance Framework v1.0."*
+> *"The Rental Rate Reference shall be the CRI-H100 index published by Compute Credit Index Research LLC, calculated in accordance with CCIR Methodology v1.1.1 (https://github.com/ccir-index/ccir-methodology/blob/main/METHODOLOGY-v1.1.1.md), as may be amended pursuant to the Change Control provisions of CCIR Governance Framework v1.0."*
 
 For transactions requiring a fixed methodology version (no amendments), reference the specific commit hash rather than the file path.
 
@@ -121,11 +121,11 @@ For transactions requiring a fixed methodology version (no amendments), referenc
 
 Every version of every document in this repository is permanently available via its Git commit SHA. To pin a transaction to an exact methodology snapshot:
 
-1. Navigate to the file on GitHub (e.g., `METHODOLOGY-v1.1.0.md`)
+1. Navigate to the file on GitHub (e.g., `METHODOLOGY-v1.1.1.md`)
 2. Click **History** → select the relevant commit → copy the full 40-character SHA
 3. Reference it in your legal document:
 
-> *"...calculated in accordance with CCIR Methodology v1.1.0 as published at commit `[40-char SHA]` of https://github.com/ccir-index/ccir-methodology, which methodology shall not be subject to amendment for purposes of this Agreement."*
+> *"...calculated in accordance with CCIR Methodology v1.1.1 as published at commit `[40-char SHA]` of https://github.com/ccir-index/ccir-methodology, which methodology shall not be subject to amendment for purposes of this Agreement."*
 
 This provides an immutable, court-verifiable reference to the exact methodology in effect at signing — independent of any future CCIR document updates.
 
@@ -148,8 +148,8 @@ Contrast with proprietary benchmark feeds distributed via terminal subscriptions
 CCIR uses semantic versioning for methodology documents:
 
 - **Major version** (e.g., v1.0 → v2.0): Material change. 60-day notice, 30-day stakeholder consultation, formal Oversight review. Existing contracts reference the prior version unless explicitly amended.
-- **Minor version** (e.g., v1.0 → v1.1): Non-material improvement. 14-day notice. Contracts referencing "v1.x" automatically follow minor updates.
-- **Patch** (e.g., v1.1.0 → v1.1.1): Clarification or typographical correction only. No substantive change to calculation.
+- **Minor version** (e.g., v1.0 → v1.1.1): Non-material improvement. 14-day notice. Contracts referencing "v1.x" automatically follow minor updates.
+- **Patch** (e.g., v1.1.1 → v1.1.1): Clarification or typographical correction only. No substantive change to calculation.
 
 See `VERSIONING.md` for the full policy and `CHANGELOG.md` for the complete version history.
 
@@ -187,15 +187,16 @@ Complaints regarding index calculation, methodology interpretation, or governanc
 
 ## Current Index Family
 
-| Index | Status | Description |
-|-------|--------|-------------|
-| CRI-H100 | **Live** — first publication March 2026 | Weekly median H100 SXM rental rate, US marketplace |
-| CRI-R | **Live** — companion series, not a benchmark | Weekly posted rate cards from Azure, AWS, GCP, RunPod — H100, A100, H200, V100. Published at `data/reference-rates/`. Not an IOSCO-compliant benchmark; contextual reference data only. |
-| CRI-S | Planned — Q3-Q4 2026 | Rental-resale spread index (requires broker data partnership) |
-| CRI-D | Planned — Q1-Q2 2027 | Cross-generational depreciation curves (requires 12-18 months CRI-H100 data) |
-| CRI-H100-PA | Roadmap | Performance-adjusted variant (requires reproducible benchmark methodology) |
-| CRI-H100-EU | Roadmap | European geography, identical methodology |
-| CRI-H100-APAC | Roadmap | Asia-Pacific geography, identical methodology |
+| Index | Tier | Status | Description |
+|-------|------|--------|-------------|
+| CRI-H100 | Training | **Live** — first publication March 2026 | Weekly median H100 SXM rental rate, US marketplace |
+| CRI-H200 | Training (next-gen) | **Live** — first publication March 2026 | Weekly median H200 rental rate, US marketplace. Next-generation training-tier reference rate |
+| CRI-L40S | Inference | **Live** — first publication March 2026 | Weekly median L40S rental rate, US marketplace. Inference-tier reference rate |
+| CRI-S | Cross-tier spread | Planned — Q3-Q4 2026 | Rental-resale spread index (requires broker data partnership) |
+| CRI-D | Depreciation curves | Planned — Q1-Q2 2027 | Cross-generational depreciation curves (requires 12-18 months CRI data) |
+| CRI-H100-PA | Performance-adjusted | Roadmap | Performance-adjusted variant (requires reproducible benchmark methodology) |
+| CRI-H100-EU | Regional | Roadmap | European geography, identical methodology |
+| CRI-H100-APAC | Regional | Roadmap | Asia-Pacific geography, identical methodology |
 
 See `FUTURE-EXTENSIONS.md` for full roadmap detail.
 
