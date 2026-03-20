@@ -10,11 +10,12 @@ This repository contains the published methodology and governance framework for 
 
 | Document | Version | Description |
 |---|---|---|
-| [CCIR Methodology V1_0_0.pdf](./CCIR%20Methodology%20V1_0_0.pdf) | v1.0.0 · March 2026 | Index construction methodology — eligibility criteria, computation procedures, confidence flag definitions, source taxonomy, and spread framework |
-| [CCIR Governance V1_0_0.pdf](./CCIR%20Governance%20V1_0_0.pdf) | v1.0 · March 2026 | Governance and IOSCO Alignment Statement — detailed crosswalk of all 19 IOSCO Principles for Financial Benchmarks |
-| [CCIR Change Management Policy V1_0_0.pdf](./CCIR%20Change%20Management%20Policy%20V1_0_0.pdf) | v1.0 · March 2026 | Benchmark change management and versioning policy — change classification tiers, notice periods, notification procedures, and index cessation policy |
-| [CCIR Complaints Procedure V1_0_0.pdf](./CCIR%20Complaints%20Procedure%20V1_0_0.pdf) | v1.0 · March 2026 | Formal complaints procedure — submission, investigation, determination, and escalation process |
-| [CCIR Fallback Language Guidance V1_0_0.pdf](./CCIR%20Fallback%20Language%20Guidance%20V1_0_0.pdf) | v1.0 · March 2026 | Guidance for structured finance counsel drafting CRI rate references — benchmark definitions, trigger events, fallback waterfall, and successor benchmark provisions |
+| [CCIR_Methodology_v1_0_0.pdf](./CCIR_Methodology_v1_0_0.pdf) | v1.0.0 · March 2026 | Index construction methodology — eligibility criteria, computation procedures, confidence flag definitions, source taxonomy, and spread framework |
+| [CCIR_Governance_v1_0_0.pdf](./CCIR_Governance_v1_0_0.pdf) | v1.0.0 · March 2026 | Governance and IOSCO Alignment Statement — detailed crosswalk of all 19 IOSCO Principles for Financial Benchmarks |
+| [CCIR_Benchmark_Design_Rationale_v1_0_0.pdf](./CCIR_Benchmark_Design_Rationale_v1_0_0.pdf) | v1.0.0 · March 2026 | Benchmark design rationale — construction choices, technical rationale, and underwriter implications for each index design decision |
+| [CCIR_Change_Management_Policy_v1_0_0.pdf](./CCIR_Change_Management_Policy_v1_0_0.pdf) | v1.0.0 · March 2026 | Benchmark change management and versioning policy — change classification, notice periods, consultation requirements, and historical data preservation |
+| [CCIR_Fallback_Language_Guidance_v1_0_0.pdf](./CCIR_Fallback_Language_Guidance_v1_0_0.pdf) | v1.0.0 · March 2026 | Fallback language guidance for credit agreements — benchmark definition language, trigger events, fallback rate waterfall, and successor benchmark mechanism |
+| [CCIR_Complaints_Procedure_v1_0.pdf](./CCIR_Complaints_Procedure_v1_0.pdf) | v1.0 · March 2026 | Complaints procedure — scope, process, determination timelines, corrective action standards, and Oversight Board escalation path |
 
 ---
 
@@ -25,8 +26,11 @@ The CRI index family covers five GPU models across spot and cluster tiers:
 **Spot indices** — on-demand, noninterruptible, per-GPU-per-hour  
 `CRI-B200` · `CRI-H200` · `CRI-H100` · `CRI-A100` · `CRI-L40S`
 
-**Cluster indices** — going-concern revenue at scale  
-`CRI-H100-CLS-MM` · `CRI-A100-CLS-MM` · `CRI-B200-CLS-MM` (mid-market) · `CRI-H100-CLS-ENT` · `CRI-H200-CLS-ENT` · `CRI-B200-CLS-ENT` (enterprise)
+**Cluster indices — mid-market (MM)** — marketplace spot cluster rates, no term commitment  
+`CRI-H100-CLS-MM` · `CRI-A100-CLS-MM` · `CRI-B200-CLS-MM`
+
+**Cluster indices — enterprise (ENT)** — posted rate card, bundled infrastructure  
+`CRI-H100-CLS-ENT` · `CRI-H200-CLS-ENT` · `CRI-B200-CLS-ENT`
 
 **Generation Spread** — CRI-B200 vs CRI-H100, and CRI-H100 vs CRI-A100  
 The primary collateral obsolescence signal for §7.04 Generation Spread covenants.
@@ -37,7 +41,7 @@ Published rate data is available at [ccir-index/ccir-data](https://github.com/cc
 
 ## Structural Independence
 
-CCIR holds no financial interest — equity, revenue share, referral fee, or data licensing income — in any GPU compute marketplace, cloud provider, or data center operator from which it collects data. All data is collected algorithmically from public APIs and published rate cards. No source submits pricing to CCIR; CCIR retrieves publicly posted prices.
+CCIR holds no financial interest — equity, revenue share, referral fee, or data licensing income — in any GPU compute marketplace, cloud provider, or data center operator from which it collects data. All data is collected algorithmically from public APIs and published rate cards. No source submits pricing to CCIR; CCIR retrieves publicly posted prices. CCIR does not participate in or structure credit transactions referencing CRI rates, and does not provide advice regarding any such transaction.
 
 This structural independence is the organizational precondition for CRI indices to function as citation-grade reference instruments in credit documents. In a post-LIBOR environment, a benchmark cited in a credit agreement must be produced by an administrator that is independent from the market it measures. Lender-controlled metrics and marketplace-produced rates are both disqualified on this basis. CCIR's independence from all GPU marketplaces resolves both conditions.
 
@@ -49,10 +53,10 @@ CCIR maintains voluntary alignment with the [IOSCO Principles for Financial Benc
 
 Of the 19 IOSCO Principles:
 - **16 — Compliant** as of March 2026
-- **2 — Targeted** (Oversight Board formation Q1 2027; annual independent audit)
-- **3 — Not Applicable** (submitter code of conduct, submitter panels — CCIR has no human submitters)
+- **2 — Targeted** (Oversight Board formation Q1 2027; annual independent audit first full calendar year)
+- **3 — Not Applicable** (P11, P12, P14 — submitter code of conduct and submitter panels; CCIR has no human submitters)
 
-Full crosswalk in [CCIR Governance V1_0_0.pdf](./CCIR%20Governance%20V1_0_0.pdf).
+Full crosswalk in [CCIR_Governance_v1_0_0.pdf](./CCIR_Governance_v1_0_0.pdf).
 
 ---
 
@@ -62,9 +66,8 @@ Full crosswalk in [CCIR Governance V1_0_0.pdf](./CCIR%20Governance%20V1_0_0.pdf)
 |---|---|---|
 | Dual automated audit framework | Operational | — |
 | Methodology v1.0.0 publication | Complete | March 2026 |
+| Complaints procedure publication | Complete | March 2026 |
 | Monthly model string review | Operational | — |
-| Change management and versioning policy | Complete | March 2026 |
-| Formal complaints procedure | Complete | March 2026 |
 | Annual independent audit | Targeted | First full calendar year |
 | Oversight Board formation | Targeted | Q1 2027 |
 
@@ -72,7 +75,7 @@ Full crosswalk in [CCIR Governance V1_0_0.pdf](./CCIR%20Governance%20V1_0_0.pdf)
 
 ## Versioning
 
-Every published index value carries a methodology version stamp. Historical values computed under a prior methodology version are never restated. Any filter change, computation change, or source inclusion change requires documentation of the rationale and a version bump with prospective application only.
+Every published index value carries a methodology version stamp. Historical values computed under a prior methodology version are never restated. This non-restatement principle is intended to preserve contractual certainty for financial agreements referencing CRI indices. Any filter change, computation change, or source inclusion change requires documentation of the rationale and a version bump with prospective application only.
 
 ---
 
