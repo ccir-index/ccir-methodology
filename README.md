@@ -12,8 +12,9 @@ This repository contains the published methodology and governance framework for 
 |---|---|---|
 | [CCIR Methodology V1_0_0.pdf](./CCIR%20Methodology%20V1_0_0.pdf) | v1.0.0 · March 2026 | Index construction methodology — eligibility criteria, computation procedures, confidence flag definitions, source taxonomy, and spread framework |
 | [CCIR Governance V1_0_0.pdf](./CCIR%20Governance%20V1_0_0.pdf) | v1.0 · March 2026 | Governance and IOSCO Alignment Statement — detailed crosswalk of all 19 IOSCO Principles for Financial Benchmarks |
-| [CCIR Change Management Policy V1_0.pdf](./CCIR%20Change%20Management%20Policy%20V1_0.pdf) | v1.0 · March 2026 | Benchmark change management and versioning policy — change classification tiers, notice periods, notification procedures, and index cessation policy |
-| [CCIR Complaints Procedure V1_0.pdf](./CCIR%20Complaints%20Procedure%20V1_0.pdf) | v1.0 · March 2026 | Formal complaints procedure — submission, investigation, determination, and escalation process |
+| [CCIR Change Management Policy V1_0_0.pdf](./CCIR%20Change%20Management%20Policy%20V1_0_0.pdf) | v1.0 · March 2026 | Benchmark change management and versioning policy — change classification tiers, notice periods, notification procedures, and index cessation policy |
+| [CCIR Complaints Procedure V1_0_0.pdf](./CCIR%20Complaints%20Procedure%20V1_0_0.pdf) | v1.0 · March 2026 | Formal complaints procedure — submission, investigation, determination, and escalation process |
+| [CCIR Fallback Language Guidance V1_0_0.pdf](./CCIR%20Fallback%20Language%20Guidance%20V1_0_0.pdf) | v1.0 · March 2026 | Guidance for structured finance counsel drafting CRI rate references — benchmark definitions, trigger events, fallback waterfall, and successor benchmark provisions |
 
 ---
 
