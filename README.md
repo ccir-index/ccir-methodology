@@ -12,6 +12,8 @@ This repository contains the published methodology and governance framework for 
 |---|---|---|
 | [CCIR Methodology V1_0_0.pdf](./CCIR%20Methodology%20V1_0_0.pdf) | v1.0.0 · March 2026 | Index construction methodology — eligibility criteria, computation procedures, confidence flag definitions, source taxonomy, and spread framework |
 | [CCIR Governance V1_0_0.pdf](./CCIR%20Governance%20V1_0_0.pdf) | v1.0 · March 2026 | Governance and IOSCO Alignment Statement — detailed crosswalk of all 19 IOSCO Principles for Financial Benchmarks |
+| [CCIR Change Management Policy V1_0.pdf](./CCIR%20Change%20Management%20Policy%20V1_0.pdf) | v1.0 · March 2026 | Benchmark change management and versioning policy — change classification tiers, notice periods, notification procedures, and index cessation policy |
+| [CCIR Complaints Procedure V1_0.pdf](./CCIR%20Complaints%20Procedure%20V1_0.pdf) | v1.0 · March 2026 | Formal complaints procedure — submission, investigation, determination, and escalation process |
 
 ---
 
@@ -23,7 +25,7 @@ The CRI index family covers five GPU models across spot and cluster tiers:
 `CRI-B200` · `CRI-H200` · `CRI-H100` · `CRI-A100` · `CRI-L40S`
 
 **Cluster indices** — going-concern revenue at scale  
-`CRI-H100-CLS-MM` (mid-market) · `CRI-H100-CLS-ENT` (enterprise) · `CRI-B200-CLS-ENT` · `CRI-H200-CLS-ENT`
+`CRI-H100-CLS-MM` · `CRI-A100-CLS-MM` · `CRI-B200-CLS-MM` (mid-market) · `CRI-H100-CLS-ENT` · `CRI-H200-CLS-ENT` · `CRI-B200-CLS-ENT` (enterprise)
 
 **Generation Spread** — CRI-B200 vs CRI-H100, and CRI-H100 vs CRI-A100  
 The primary collateral obsolescence signal for §7.04 Generation Spread covenants.
@@ -45,7 +47,7 @@ This structural independence is the organizational precondition for CRI indices 
 CCIR maintains voluntary alignment with the [IOSCO Principles for Financial Benchmarks (July 2013)](https://www.iosco.org/library/pubdocs/pdf/IOSCOPD415.pdf) — the structural standard structured finance counsel and rating agencies use to evaluate benchmark fitness for credit document citation.
 
 Of the 19 IOSCO Principles:
-- **14 — Compliant** as of March 2026
+- **16 — Compliant** as of March 2026
 - **2 — Targeted** (Oversight Board formation Q1 2027; annual independent audit)
 - **3 — Not Applicable** (submitter code of conduct, submitter panels — CCIR has no human submitters)
 
@@ -60,9 +62,10 @@ Full crosswalk in [CCIR Governance V1_0_0.pdf](./CCIR%20Governance%20V1_0_0.pdf)
 | Dual automated audit framework | Operational | — |
 | Methodology v1.0.0 publication | Complete | March 2026 |
 | Monthly model string review | Operational | — |
+| Change management and versioning policy | Complete | March 2026 |
+| Formal complaints procedure | Complete | March 2026 |
 | Annual independent audit | Targeted | First full calendar year |
 | Oversight Board formation | Targeted | Q1 2027 |
-| Formal complaints procedure | Targeted | Q1 2027 |
 
 ---
 
@@ -75,7 +78,4 @@ Every published index value carries a methodology version stamp. Historical valu
 ## Contact
 
 Methodology questions, source inclusion inquiries, and formal complaints: [research@ccir.io](mailto:research@ccir.io)  
-Written response within 10 business days.
-Contact
-Methodology questions, source inclusion inquiries, and formal complaints: research@ccir.io  
 Written response within 10 business days.
