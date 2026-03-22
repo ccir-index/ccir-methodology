@@ -14,6 +14,7 @@ This repository contains the published methodology and governance framework for 
 | [CCIR_Governance_v1_0_0.pdf](./CCIR_Governance_v1_0_0.pdf) | v1.0.0 · March 2026 | Governance and IOSCO Alignment Statement — detailed crosswalk of all 19 IOSCO Principles for Financial Benchmarks |
 | [CCIR_Benchmark_Design_Rationale_v1_0_0.pdf](./CCIR_Benchmark_Design_Rationale_v1_0_0.pdf) | v1.0.0 · March 2026 | Benchmark design rationale — construction choices, technical rationale, and underwriter implications for each index design decision |
 | [CCIR_Change_Management_Policy_v1_0_0.pdf](./CCIR_Change_Management_Policy_v1_0_0.pdf) | v1.0.0 · March 2026 | Benchmark change management and versioning policy — change classification, notice periods, consultation requirements, and historical data preservation |
+| [CCIR_Data_Source_Quality_Policy_v1_0_0.pdf](./CCIR_Data_Source_Quality_Policy_v1_0_0.pdf) | v1.0.0 · March 2026 | Data source quality policy — source eligibility criteria, shadow period and integration process, ongoing monitoring cadence, source coverage standards, and publication hold thresholds |
 | [CCIR_Fallback_Language_Guidance_v1_0_0.pdf](./CCIR_Fallback_Language_Guidance_v1_0_0.pdf) | v1.0.0 · March 2026 | Fallback language guidance for credit agreements — benchmark definition language, trigger events, fallback rate waterfall, and successor benchmark mechanism |
 | [CCIR_Complaints_Procedure_v1_0.pdf](./CCIR_Complaints_Procedure_v1_0.pdf) | v1.0 · March 2026 | Complaints procedure — scope, process, determination timelines, corrective action standards, and Oversight Board escalation path |
 
@@ -52,9 +53,9 @@ This structural independence is the organizational precondition for CRI indices 
 CCIR maintains voluntary alignment with the [IOSCO Principles for Financial Benchmarks (July 2013)](https://www.iosco.org/library/pubdocs/pdf/IOSCOPD415.pdf) — the structural standard structured finance counsel and rating agencies use to evaluate benchmark fitness for credit document citation.
 
 Of the 19 IOSCO Principles:
-- **16 — Compliant** as of March 2026
+- **17 — Compliant** as of March 2026
 - **2 — Targeted** (Oversight Board formation Q1 2027; annual independent audit first full calendar year)
-- **3 — Not Applicable** (P11, P12, P14 — submitter code of conduct and submitter panels; CCIR has no human submitters)
+- **2 — Not Applicable** (P11, P14 — submitter code of conduct and submitter panels; CCIR has no human submitters)
 
 Full crosswalk in [CCIR_Governance_v1_0_0.pdf](./CCIR_Governance_v1_0_0.pdf).
 
@@ -67,6 +68,7 @@ Full crosswalk in [CCIR_Governance_v1_0_0.pdf](./CCIR_Governance_v1_0_0.pdf).
 | Dual automated audit framework | Operational | — |
 | Methodology v1.0.0 publication | Complete | March 2026 |
 | Complaints procedure publication | Complete | March 2026 |
+| Data Source Quality Policy publication | Complete | March 2026 |
 | Monthly model string review | Operational | — |
 | Annual independent audit | Targeted | First full calendar year |
 | Oversight Board formation | Targeted | Q1 2027 |
