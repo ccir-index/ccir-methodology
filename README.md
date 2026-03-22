@@ -55,7 +55,7 @@ CCIR maintains voluntary alignment with the [IOSCO Principles for Financial Benc
 Of the 19 IOSCO Principles:
 - **17 — Compliant** as of March 2026
 - **2 — Targeted** (Oversight Board formation Q1 2027; annual independent audit first full calendar year)
-- **2 — Not Applicable** (P11, P14 — submitter code of conduct and submitter panels; CCIR has no human submitters)
+- **3 — Not Applicable** (P11, P12, P14 — submitter code of conduct, submitter code of conduct content, and submitter panels; CCIR has no human submitters)
 
 Full crosswalk in [CCIR_Governance_v1_0_0.pdf](./CCIR_Governance_v1_0_0.pdf).
 
